@@ -1,0 +1,128 @@
+p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail-picture {
+  width: 100%;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture-container .profile-picture-hover {
+  position: absolute;
+  top: 55px;
+  background-color: white;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+  padding: 12px 12px;
+  width: 200px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture-container:hover .profile-picture-hover {
+  opacity: 1;
+}
+
+.picture-hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 8px;
+}
+
+.channel-name {
+  font-family: Roboto, Arial;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.subscribers-number {
+  font-family: Roboto, Arial;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time {
+  position: absolute;
+  background-color: black;
+  color: white;
+  bottom: 10px;
+  right: 4px;
+  font-family: Robot, Arial;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 4px;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.video-author,
+.video-status {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 5px;
+}
+
+.video-title-link {
+  text-decoration: none;
+  color: black;
+}
